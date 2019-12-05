@@ -10,24 +10,24 @@ function promptUser() {
       var includeLowerCase = confirm("Click OK to confirm including lower case characters in your password.");
       var includeUpperCase = confirm("Click OK to confirm including upper case characters in your password.");
     }
-    
-  console.log(charCountChoice);
-  console.log(includeSpecial);
-  console.log(includeNumeric);
-  console.log(includeLowerCase);
-  console.log(includeUpperCase);  
+      
+
+  //invoke password creation function here
 
   showPassword();
   document.getElementById("textarea").innerHTML = showPassword();
 }
-  
-var specialChar = ["!", "#", "$", "%", "^", "&", "*", "-", "+"];
-var numericChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var upperChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var lowerChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  
 
-var password = undefined;
+var passwordPieces = {
+  specialChar: ["!", "#", "$", "%", "^", "&", "*", "-", "+"],
+  numericChar: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  upperChar: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+  lowerChar: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+}
+
+
+
+var password = passwordPieces.specialChar[Math.floor(Math.random() * passwordPieces.specialChar.length)];
 
 function showPassword() {
   return password;
