@@ -18,4 +18,4 @@ www.w3schools.com/js/js_comparisons.asp    I used this to find the "not equal to
 
 https://www.kirupa.com/html5/picking_random_item_from_array.htm    Used this page for help with random value selection from arrays.
 
-https://www.w3schools.com/howto/howto_js_copy_clipboard.asp    Showed me how to copy password to clipboard
+https://www.w3schools.com/howto/howto_js_copy_clipboard.asp    Showed me how to copy password to clipboard 
