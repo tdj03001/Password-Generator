@@ -30,3 +30,14 @@ var password = passwordPieces.specialChar[Math.floor(Math.random() * passwordPie
 function showPassword() {
   return password;
 }
+
+function copyFunction() {
+  var copyText = document.getElementById("textarea");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  
+  document.execCommand("copy");
+
+  alert("Password copied to clipboard");
+}
