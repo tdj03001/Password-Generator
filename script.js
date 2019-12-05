@@ -1,5 +1,10 @@
+
 function promptUser() {
   var charCountChoice = prompt("How many characters would you like your password to have (must be between 8 and 128)?");
+    if (charCountChoice < 8 || charCountChoice > 128 || charCountChoice.typeOf!==Number) {
+      alert("Entry must be an integer between 8 and 128.");
+      promptUser();
+    }
   var includeSpecial = confirm("Click OK to confirm including special characters in your password.");
   var includeNumeric = confirm("Click OK to confirm including numeric characters in your password.");
   var includeLowerCase = confirm("Click OK to confirm including lower case characters in your password.");
@@ -10,6 +15,9 @@ function promptUser() {
   console.log(includeNumeric);
   console.log(includeLowerCase);
   console.log(includeUpperCase);  
+
+  showPassword();
+  document.getElementById("textarea").innerHTML = showPassword();
 }
   
 var specialChar= ["!", "#", "$", "%", "^", "&", "*", "-", "+"];
@@ -18,12 +26,8 @@ var upperChar= ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 var lowerChar= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   
 
-
-
-
-var password= promptUser();
+var password= undefined;
 
 function showPassword() {
   return password;
 }
-document.getElementById("textarea").innerHTML = showPassword();
