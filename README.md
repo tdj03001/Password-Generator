@@ -12,7 +12,11 @@ The purpose of this application is to generate a random password based on user i
 
 # Live Site
 
-https://tdj03001.github.io/UPenn-Week-3-Homework-JS-Password-Generator/
+https://tdj03001.github.io/Password-Generator/
+
+# GitHub Repo
+
+https://github.com/tdj03001/Password-Generator
 
 
 # Usage
